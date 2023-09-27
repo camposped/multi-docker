@@ -19,7 +19,7 @@ after_success:
   # Send images to Docker Hub
   - docker push camposped/multi-client
   - docker push camposped/multi-nginx
-  # - docker push camposped/multi-server
+  - docker push camposped/multi-server
   - docker push camposped/multi-worker
 
 
