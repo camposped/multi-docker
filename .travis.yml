@@ -21,7 +21,6 @@ after_success:
   - docker push camposped/multi-nginx
   - docker push camposped/multi-server
   - docker push camposped/multi-worker
-
 deploy:
   provider: elasticbeanstalk
   region: 'us-east-2'
