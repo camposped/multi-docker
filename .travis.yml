@@ -14,6 +14,13 @@ after_success:
   - docker build -t camposped/multi-nginx ./nginx
   - docker build -t camposped/multi-server ./server
   - docker build -t camposped/multi-worker ./worker
+  # Log in to the Docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # Send images to Docker Hub
+  - docker push camposped/multi-client
+  - docker push camposped/multi-nginx
+  - docker push camposped/multi-server
+  - docker push camposped/multi-worker
 
-deploy:
-  - 
+# deploy:
+#   - 
